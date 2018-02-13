@@ -5,27 +5,13 @@
       class="no-print"
       multiple
       @change="onFileChange"/>
-
-    <div
-      v-for="(card, index) in cards"
-      :key="card.number"
-    >
-      <CardComponent :card-data="card"/>
-      <div
-        class="page-break"
-        v-if="index % 2 === 1"
-      />
-    </div>
   </div>
 </template>
 
 <script>
-import CardComponent from './CardComponent';
-
 export default {
   name: 'LandingComponent',
   components: {
-    CardComponent,
   },
   methods: {
     onFileChange(e) {
@@ -54,7 +40,7 @@ export default {
               priority: this.getValueFromDom(dom, 'priority'),
               description: this.getValueFromDom(dom, 'item description'),
               reporter: this.getValueFromDom(dom, 'reporter'),
-              date: this.getValueFromDom(dom, 'created'),
+              date: this.getValueFromDom(dom, 'created').split(' ').slice(0, 4).join(' '),
               release: this.getValueFromDom(dom, 'fixVersion'),
               epic: '-',
               storyPoints: '',
@@ -86,7 +72,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
@@ -103,7 +88,7 @@ a {
   color: #42b983;
 }
 @media print {
-  .page {
+  .page-break {
     page-break-after: always;
   }
   .no-print, .no-print * {

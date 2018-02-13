@@ -25,7 +25,7 @@
     <div class="bottom-bar">
       <div class="details-box">
         <div class="issue-detail">
-          {{ cardData.epic }}
+          <!-- {{ cardData.epic }} -->
         </div>
         <div class="issue-detail">
           {{ cardData.release }}
@@ -60,11 +60,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+$right-margin-size: 1.5in;
 .card {
   padding: 0.1in;
-  width: 6in;
+  width: 7in;
   min-height: 4in;
+  max-height: 6in;
   /* background-color: lightcoral; */
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -81,12 +83,15 @@ export default {
   justify-content: space-between;
 }
 .issue-summary {
-  font-size: 16pt;
+  font-size: 20pt;
+  font-weight: bold;
   border-width: 0;
   border-bottom-width: 1pt;
   border-style: solid;
   text-align: start;
-  max-width: 5in;
+  /* max-width: 5in; */
+  padding-bottom: 0.1in;
+  /* background: lightblue; */
 }
 .top-right-box {
   text-align: end;
@@ -95,10 +100,10 @@ export default {
   background-color: white;
 }
 .issue-number {
-  font-size: 32pt;
+  font-size: 52pt;
 }
 .issue-priority {
-  font-size: 16pt;
+  font-size: 24pt;
   margin-right: 2pt;
 }
 .middle-bar {
@@ -111,12 +116,13 @@ export default {
 .issue-description {
   text-align: start;
   padding-inline-start: 0.1in;
-  max-height: 6in;
-  margin-right: 1.5in;
+  height: 3in;
+  margin-right: $right-margin-size;
   font-size: 10pt;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  /* background: lightpink; */
 }
 .bottom-bar {
   /* background-color: lightyellow; */
