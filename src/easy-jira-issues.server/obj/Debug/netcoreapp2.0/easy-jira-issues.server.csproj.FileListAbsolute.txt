@@ -1,0 +1,10 @@
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\bin\Debug\netcoreapp2.0\easy-jira-issues.server.deps.json
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\bin\Debug\netcoreapp2.0\easy-jira-issues.server.runtimeconfig.json
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\bin\Debug\netcoreapp2.0\easy-jira-issues.server.runtimeconfig.dev.json
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\bin\Debug\netcoreapp2.0\easy-jira-issues.server.dll
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\bin\Debug\netcoreapp2.0\easy-jira-issues.server.pdb
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\obj\Debug\netcoreapp2.0\easy-jira-issues.server.csproj.CoreCompileInputs.cache
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\obj\Debug\netcoreapp2.0\easy-jira-issues.server.AssemblyInfoInputs.cache
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\obj\Debug\netcoreapp2.0\easy-jira-issues.server.AssemblyInfo.cs
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\obj\Debug\netcoreapp2.0\easy-jira-issues.server.dll
+C:\Users\Jay\Projects\easy-jira-issues\src\easy-jira-issues.server\obj\Debug\netcoreapp2.0\easy-jira-issues.server.pdb

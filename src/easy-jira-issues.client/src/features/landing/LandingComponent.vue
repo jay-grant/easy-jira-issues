@@ -1,25 +1,44 @@
 <template>
   <div>
-    <input
-      type="file"
-      class="no-print"
-      multiple
-      @change="onFileChange"/>
+    <h1>File Upload</h1>
+    <p>Test file uploads to API on http://localhost:5000/api/values</p>
+    <div class="button-group">
+      <input
+        type="file"
+        class="no-print"
+        multiple
+        @change="onFileChange"/>
+      <button v-on:click="testApi">
+        TEST API
+      </button>
+      </div>
   </div>
 </template>
 
 <script>
+import ApiService from '../../common/ApiService';
+
 export default {
   name: 'LandingComponent',
   components: {
   },
   methods: {
+    async testApi() {
+      const response = await ApiService.post('values', {
+        yeet: 'esketit',
+        skrt: 'hELLO',
+        god: 'help',
+      });
+      console.log(response);
+    },
     onFileChange(e) {
       const files = e.target.files || e.dataTransfer.files;
       if (!files.length) {
         return;
       }
-      this.loadFiles(files);
+      console.log(files);
+      ApiService.post('values', files);
+      // this.loadFiles(files);
     },
     handleFile(file, callback) {
       const reader = new FileReader();
@@ -86,6 +105,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.button-group * {
+  display: block;
+  margin-top: 4px;
+  margin-left: 4px;
 }
 @media print {
   .page-break {

@@ -1,24 +1,32 @@
-const apiAddress = 'http://localhost:9000/api/';
+import Maybe from './Maybe';
 
-class ApiService {
+const apiAddress = 'http://localhost:5000/api/';
+
+export default class ApiService {
   static async post(url, payload) {
-    const response = await fetch(apiAddress + url, {
-      body: JSON.stringify(payload),
-      cache: 'no-cache',
-      headers: {
-        'content-type': 'application/json',
-      },
-      method: 'post',
-    });
-    return response.json();
+    try {
+      const response = await fetch(apiAddress + url, {
+        body: JSON.stringify(payload),
+        cache: 'no-cache',
+        headers: {
+          'content-type': 'application/json',
+        },
+        method: 'post',
+      });
+      return await Maybe.json(response);
+    } catch (e) {
+      return false;
+    }
   }
 
   static async get(url) {
-    const response = await fetch(apiAddress + url, {
-      method: 'get',
-    });
-    return response.json();
+    try {
+      const response = await fetch(apiAddress + url, {
+        method: 'get',
+      });
+      return Maybe.json(response);
+    } catch (e) {
+      return false;
+    }
   }
 }
-
-export default new ApiService();
